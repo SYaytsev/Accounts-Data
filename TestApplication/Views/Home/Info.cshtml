@@ -1,0 +1,23 @@
+﻿@model TestApplication.Models.Employee
+@{
+    ViewBag.Title = "Page 2";
+}
+
+<div class="jumbotron" style="background-color:white;">
+    <h2>@ViewBag.Name, @ViewBag.Title</h2>
+
+    @Html.ActionLink("Back to List", "Index", "Home", null, new { @class = "btn btn-default" })
+
+    <div style="font-size:16px">
+        <img src="@Model.Picture" class="photo" />
+        <div class="left">
+            <h2>@Model.Name, @Model.Gender</h2>
+            <div>@Model.Company</div>
+            <div>@Model.Email</div>
+            <div>@Model.Phone</div>
+            <div>@Model.Address</div>
+            <div>Registered: @Model.Registered</div>
+        </div>
+        <div class="left">@Model.About</div>
+    </div>
+ </div>
